@@ -15,14 +15,14 @@ redisclient.on('connect', ()=> console.log('connected to redis....'));
 redisclient.connect();
 // connect to mongodb
 const DB_NAME= 'root';
-const DB_PASSWOED = 'example';
+const DB_PASSWORD = 'example';
 const DB_PORT = 27017 ;
-const DB_HOST = '172.18.0.2';
+const DB_HOST = 'mongo';
 
 
-const URI = `mongodb://${DB_NAME}:${DB_PASSWOED}@${DB_HOST}:${DB_PORT}`;
+const URI = `mongodb://${DB_NAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`;
 
-mongoose.connect(URI).then(() => console.log("connected.")).catch(() => console.log("failed to connect"));
+mongoose.connect(URI).then(() => console.log("connected to mongo.")).catch(() => console.log("failed to connect"));
 
 app.get('/', (req,res) => res.send('<h1> Hello Tresmerge!dev dev</h1>'));
 app.listen(PORT , () =>console.log(`app is up and running on port: ${PORT}`));
