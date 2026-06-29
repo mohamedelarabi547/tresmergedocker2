@@ -24,5 +24,5 @@ const URI = `mongodb://${DB_NAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`;
 
 mongoose.connect(URI).then(() => console.log("connected to mongo.")).catch(() => console.log("failed to connect"));
 
-app.get('/', (req,res) => res.send('<h1> Hello Tresmerge!dev dev</h1>'));
+app.get('/', (req,res) => res.send('<h1> Hello Tresmerge!from aws</h1>'));
 app.listen(PORT , () =>console.log(`app is up and running on port: ${PORT}`));
